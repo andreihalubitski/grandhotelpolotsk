@@ -1,0 +1,57 @@
+#tl-booking-form {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+#block-search,
+#block-search * {
+    box-sizing: border-box;
+}
+
+/* —— Фон вокруг подножки: родной светлый цвет сайта —— */
+*:has(> #block-search),
+*:has(> * > #block-search) {
+    background: #F7F7F7;   /* исходный цвет сайта из первой версии вашего файла */
+}
+
+/* —— ПОДНОЖКА: белая карточка со скруглёнными углами —— */
+#block-search {
+    background: #FFFFFF;               /* карточка белая */
+    width: calc(100% - 32px);
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 24px 0;
+    border-radius: 40px;
+    box-shadow: 0 12px 32px rgba(28, 32, 40, .10);
+    /* overflow: hidden; — включите, если собственный фон виджета будет торчать
+       из-за скруглений; проверьте после этого, не обрезается ли раскрытый календарь */
+}
+
+#block-search.--inner {
+    background: #FFFFFF;
+}
+
+.tl-container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@media (max-width: 485px) {
+    .hero-heading {
+        padding: 0 !important;
+        font-size: 32px !important;
+    }
+}
+
+/* —— Мобильная версия подножки —— */
+@media (max-width: 767px) {
+    #block-search {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+        padding: 16px 0;
+        border-radius: 12px;
+    }
+}
